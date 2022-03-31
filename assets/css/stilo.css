@@ -16,7 +16,8 @@ main{
     padding: 30px;
     border: 1px solid white;
     border-radius: 10px;
-    background-color: #151515;
+    background-color: #58033c;
+    
 }
 
 ul{
@@ -35,6 +36,7 @@ button{
     background-color: #afafaf;
     border: 2px solid white;
     border-radius: 10px;
+    box-shadow: 4px 10px #300120;
 }
 
 .visor{
@@ -48,4 +50,5 @@ button{
     margin: 10px 0px;
     padding: 10px 10px;
     font-weight: bold;
+    box-shadow: 4px 10px #300120;
 }

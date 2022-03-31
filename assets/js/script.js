@@ -1,9 +1,10 @@
 let visor = ''
-let valor1 = 0
-let valor2 = 0
+let valor1 = null
+let valor2 = null
 let resultado = 0
 let labelVisor = document.querySelector('#visor')
 let operacao = ''
+
 
 const reset = function(){
     visor = ''
@@ -11,8 +12,8 @@ const reset = function(){
 }
 
 const clickn7 = function(){
-    visor = visor + '7'
-    labelVisor.innerHTML= visor 
+    visor = visor + '7';
+    labelVisor.innerHTML= visor
 }
 
 const clickn8 = function(){
@@ -40,3 +41,4 @@ const igual = function () {
         break
     }
 }
+
