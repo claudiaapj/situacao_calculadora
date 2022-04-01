@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/stilo.css">
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js" defer></script>
     <title>Calculadora</title>
 </head>
 <body>
@@ -21,11 +21,11 @@
             <ul>
                 <li><button onclick="reset()">C</button></li>
                 <li><button onclick="reset()"></button></li>
-                <li><button onclick="on()">ON</button></li>
+                <li><button  onclick="on(0)">ON</button></li>
                 <li><button onclick="off()">OFF</button></li>
             </ul>
             <ul>
-                <li><button onclick="clickn7()">7</button></li>
+                <li><button id="iniciar" onclick="clickn7()">7</button></li>
                 <li><button onclick="clickn8()">8</button></li>
                 <li><button onclick="clickn9()">9</button></li>
                 <li><button onclick="clickOpDiv()">/</button></li>
