@@ -10,7 +10,6 @@ let onf = false
 let ativoNoturno = true
 
 
-// falta fazer o ponto e fazer funções para códigos repetidos
 function mudaVisor(){
     labelVisor.innerHTML = visor
 }
