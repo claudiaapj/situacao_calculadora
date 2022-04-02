@@ -1,7 +1,17 @@
+:root{
+    --color-bg-footer: #252525;
+}
+
+
 footer,header{
     width: 100%;
     height: 100px;
-    background-color: #252525;
+    background-color: var(--color-bg-footer);
+}
+
+.noturno{
+    font-size: 12px;
+    
 }
 
 main{
