@@ -5,9 +5,8 @@ let resultado = 0
 let labelVisor = document.querySelector('#visor')
 let operacao = ''
 let usePonto = false
-let onOff = true
-let onf = false
-let ativoNoturno = true
+let onOff = false
+let ativoNoturno = false
 
 
 function mudaVisor(){
@@ -45,6 +44,8 @@ const off = function(){
     if(onOff === true){
         visor = ''
         mudaVisor()
+    }else{
+        visor= '0'
     }
 }
 
@@ -140,13 +141,6 @@ const ponto = function(){
 
 }
 
-/*function modoNoturno(){
-    ativaNoturno = !ativaNoturno
-    if(ativaNoturno){
-        document.documentElement.style.setProperty(--color-bg-footer)
-    }
-}*/
-
 function condicao(){
     if(valor1===null && visor !== '') {
         let numero = parseFloat(visor)
@@ -158,8 +152,12 @@ function condicao(){
 
 
 const clickOpSom = function(){
+    if(onOff === false){
     operacao = 'soma' 
     condicao()
+    }console.log('valor1 ' + valor1)
+    console.log(onOff)
+    console.log(operacao)
 }
 
 const clickOpSub = function(){
@@ -211,11 +209,31 @@ const igual = function(){
         labelVisor.innerHTML = resultado
         valor1 = resultado
         visor = ''
+
     } else if(valor2!== null && visor== ''){
         conta(valor1, valor2)
         labelVisor.innerHTML = resultado
         valor1 = resultado
         console.log('valor1 ' + valor1);
-      
     }
 }
+
+function modoNoturno() {
+    let darkMode = document.documentElement.style;
+        darkMode.setProperty('--color-white', '#252525');
+        darkMode.setProperty('--color-black', '#fff');
+        darkMode.setProperty('--color-light-pink', '#cf0f96');  
+    } 
+
+function lightMode(){
+    let lightMode = document.documentElement.style;
+    lightMode.setProperty('#252525','--color-white');
+    lightMode.setProperty('#fff', '--color-black');
+    lightMode.setProperty('#cf0f96', '--color-light-pink');
+} 
+
+function alternaTela(){
+     modoNoturno()
+     lightMode()
+}console.log(ativoNoturno)
+
