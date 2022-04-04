@@ -6,7 +6,7 @@ let labelVisor = document.querySelector('#visor')
 let operacao = ''
 let usePonto = false
 let onOff = false
-let ativoNoturno = false
+let ativoNoturno = true
 
 
 function mudaVisor(){
@@ -227,13 +227,18 @@ function modoNoturno() {
 
 function lightMode(){
     let lightMode = document.documentElement.style;
-    lightMode.setProperty('#252525','--color-white');
-    lightMode.setProperty('#fff', '--color-black');
-    lightMode.setProperty('#cf0f96', '--color-light-pink');
+    lightMode.setProperty('--color-white', '#fff');
+    lightMode.setProperty('--color-black','#252525' );
+    lightMode.setProperty('--color-light-pink', '#e4acd1');
 } 
 
 function alternaTela(){
-     modoNoturno()
-     lightMode()
+
+    if(modoNoturno){
+        modoNoturno()
+    }else{
+        lightMode()
+    }
+    ativoNoturno= !ativoNoturno     
 }
 
