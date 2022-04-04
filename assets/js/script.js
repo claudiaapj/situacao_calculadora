@@ -233,11 +233,14 @@ function lightMode(){
 } 
 
 function alternaTela(){
-
-    if(modoNoturno){
-        modoNoturno()
+    let button = document.querySelector('#darkMode');
+    if(ativoNoturno){
+        modoNoturno();
+        button.innerHTML='Light Mode'
+       
     }else{
-        lightMode()
+        lightMode();
+        button.innerHTML='Dark Mode'
     }
     ativoNoturno= !ativoNoturno     
 }
