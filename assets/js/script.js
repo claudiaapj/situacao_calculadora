@@ -235,5 +235,5 @@ function lightMode(){
 function alternaTela(){
      modoNoturno()
      lightMode()
-}console.log(ativoNoturno)
+}
 
